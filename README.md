@@ -30,6 +30,6 @@ Done!
 
 ### Post Installation
 
-See below for additional tasks, if required.
+_Reference: https://codeberg.org/dozyhermit/post-install_
 
-Reference: https://codeberg.org/dozyhermit/post-install
+See above for additional actions.
