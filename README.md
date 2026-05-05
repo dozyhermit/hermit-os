@@ -12,7 +12,7 @@ The application changes are as follows:
 
 1. Adding `git`, `zsh`, `librewolf`, `screenfetch` and `docker`
 2. Removing `google-chrome` and `PyCharm` package repositories
-3. Removing `firefox`, all preinstalled GNOME packages
+3. Removing `firefox`, preinstalled GNOME packages
 
 ### GNOME
 
@@ -27,3 +27,9 @@ Download `fedora-silverblue` and install it: https://fedoraproject.org/atomic-de
 Open a terminal, execute: `sudo bootc switch ghcr.io/dozyhermit/hermit-os`
 
 Done!
+
+### Post Installation
+
+See below for additional tasks, if required.
+
+Reference: https://codeberg.org/dozyhermit/post-install
