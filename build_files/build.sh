@@ -9,7 +9,7 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# this installs/removes packages from fedora repos or flatpak
+# this installs/removes packages from fedora repositories or flatpak
 # example: dnf5 install -y tmux 
 
 # this removes package repositories
