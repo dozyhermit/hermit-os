@@ -12,7 +12,7 @@ The application changes are as follows:
 
 1. Adding `git`, `zsh`, `librewolf`, `screenfetch` and `docker`
 2. Removing `google-chrome` and `PyCharm` package repositories
-3. Removing `firefox`, all preinstalled GNOME applets and packages
+3. Removing `firefox`, all preinstalled GNOME packages
 
 ### GNOME
 
