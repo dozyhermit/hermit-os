@@ -20,7 +20,11 @@ rm /etc/yum.repos.d/google-chrome.repo
 dnf5 remove -y firefox firefox-langpacks gnome-color-manager malcontent-control gnome-system-monitor gnome-tour yelp 
 
 # this installs dnf packages
-dnf5 install -y docker zsh screenfetch git
+dnf5 install -y zsh screenfetch git
+
+# this installs docker 
+dnf5 install -y docker
+systemctl enable docker.service && systemctl enable containerd.service
 
 # this removes flatpak packages
 flatpak remove -y --noninteractive --all
@@ -31,8 +35,9 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # this installs flatpak packages
 flatpak install -y --noninteractive io.gitlab.librewolf-community
 
-# this configures docker
-systemctl enable docker.service && systemctl enable containerd.service
+### Configurations
+
+# Applications and environments can be configured here.
 
 # this configures gnome shell
 gsettings set org.gnome.desktop.screensaver restart-enabled true
