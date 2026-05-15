@@ -17,7 +17,7 @@ dnf5 copr remove phracek/PyCharm
 rm /etc/yum.repos.d/google-chrome.repo
 
 # this removes dnf packages
-dnf5 remove -y firefox firefox-langpacks gnome-color-manager malcontent-control gnome-system-monitor gnome-tour yelp 
+dnf5 remove -y firefox firefox-langpacks gnome-color-manager malcontent-control gnome-system-monitor gnome-tour yelp gnome-disk-utility
 
 # this installs dnf packages
 dnf5 install -y zsh docker screenfetch git
