@@ -13,8 +13,10 @@ set -ouex pipefail
 # example: dnf5 install -y tmux 
 
 # this removes package repositories
-dnf5 copr remove phracek/PyCharm
+dnf5 config-manager --set-disabled phracek-PyCharm
 rm /etc/yum.repos.d/_copr\:copr.fedorainfracloud.org\:phracek\:PyCharm.repo
+
+dnf5 config-manager --set-disabled google-chrome
 rm /etc/yum.repos.d/google-chrome.repo
 
 # this removes dnf packages
