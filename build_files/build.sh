@@ -14,6 +14,7 @@ set -ouex pipefail
 
 # this removes package repositories
 dnf5 copr remove phracek/PyCharm 
+rm /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:phracek:PyCharm.repo
 rm /etc/yum.repos.d/google-chrome.repo
 
 # this removes dnf packages
