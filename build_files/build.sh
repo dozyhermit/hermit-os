@@ -14,8 +14,6 @@ set -ouex pipefail
 
 # this removes package repositories
 rm -rf /etc/yum.repos.d/_copr\:copr.fedorainfracloud.org\:phracek\:PyCharm.repo || true
-
-dnf5 config-manager disable google-chrome
 rm -rf /etc/yum.repos.d/google-chrome.repo || true
 
 # this removes dnf packages
