@@ -23,8 +23,8 @@ dnf5 remove -y firefox firefox-langpacks gnome-color-manager malcontent-control 
 dnf5 install -y zsh docker screenfetch git
 
 # this cleans dnf packages
-dnf5 autoremove
-dnf5 clean all
+dnf5 autoremove -y
+dnf5 clean all -y
 
 # this removes flatpak packages
 flatpak remove -y --noninteractive --all
