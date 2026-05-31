@@ -17,7 +17,7 @@ rm -rf /etc/yum.repos.d/_copr\:copr.fedorainfracloud.org\:phracek\:PyCharm.repo 
 rm -rf /etc/yum.repos.d/google-chrome.repo || true
 
 # this removes dnf packages
-dnf5 remove -y firefox firefox-langpacks gnome-color-manager malcontent-control gnome-system-monitor gnome-tour yelp gnome-disk-utility
+dnf5 remove -y firefox firefox-langpacks malcontent-control yelp gnome-color-manager gnome-system-monitor gnome-tour gnome-disk-utility gnome-remote-desktop
 
 # this installs dnf packages
 dnf5 install -y zsh docker screenfetch git
