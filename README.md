@@ -1,6 +1,6 @@
 # hermit-os
 
-<img src="./logo.png" height="150px" width="auto" alt="https://www.flaticon.com/authors/ains"/>
+<img src="./logo.png" width="auto" height="150px" alt="https://www.flaticon.com/authors/ains"/>
 
 This is a custom bootc image of Fedora Silverblue.
 
