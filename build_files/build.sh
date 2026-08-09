@@ -13,14 +13,14 @@ set -ouex pipefail
 # example: dnf5 install -y tmux 
 
 # this removes package repositories
-rm -rf /etc/yum.repos.d/_copr\:copr.fedorainfracloud.org\:phracek\:PyCharm.repo || true
-rm -rf /etc/yum.repos.d/google-chrome.repo || true
+rm -rf /etc/yum.repos.d/_copr\:copr.fedorainfracloud.org\:phracek\:PyCharm.repo
+rm -rf /etc/yum.repos.d/google-chrome.repo
 
 # this removes dnf packages
 dnf5 remove -y firefox firefox-langpacks malcontent-control yelp gnome-color-manager gnome-system-monitor gnome-tour gnome-disk-utility gnome-remote-desktop
 
 # this installs dnf packages
-dnf5 install -y zsh docker screenfetch git
+dnf5 install -y zsh git
 
 # this cleans dnf packages
 dnf5 autoremove -y
@@ -39,9 +39,3 @@ flatpak install -y --noninteractive io.gitlab.librewolf-community
 
 # this configures applications and environments
 # example: systemctl enable docker.service
-
-# this configures docker 
-systemctl enable docker.service && systemctl enable containerd.service
-
-# this configures gnome shell
-gsettings set org.gnome.desktop.screensaver restart-enabled true
