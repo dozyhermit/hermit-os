@@ -5,9 +5,6 @@ set -ouex pipefail
 ### Packages
 
 # Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs/removes packages from fedora repositories or flatpak
 # example: dnf5 install -y tmux 
@@ -20,8 +17,8 @@ rm -rf /etc/yum.repos.d/google-chrome.repo
 dnf5 install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
 dnf5 install -y "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
-dnf5 config-manager setopt fedora-cisco-openh264.enabled=1 -y
-dnf5 copr enable lizardbyte/beta -y
+dnf5 config-manager -y setopt fedora-cisco-openh264.enabled=1
+dnf5 copr -y enable lizardbyte/beta
 
 # this removes dnf packages
 dnf5 remove -y firefox firefox-langpacks malcontent-control yelp gnome-color-manager gnome-system-monitor gnome-tour gnome-disk-utility gnome-remote-desktop
@@ -31,7 +28,7 @@ dnf5 install -y zsh git steam Sunshine
 
 # this cleans dnf packages
 dnf5 autoremove -y
-dnf5 clean all -y
+dnf5 clean -y all
 
 # this removes flatpak packages
 flatpak remove -y --noninteractive --all
