@@ -19,7 +19,7 @@ dnf5 install -y "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-
 dnf5 config-manager -y setopt fedora-cisco-openh264.enabled=1
 dnf5 copr -y enable lizardbyte/beta
 
-dnf5 update
+dnf5 update -y
 
 # this removes dnf packages
 dnf5 remove -y firefox firefox-langpacks malcontent-control yelp gnome-color-manager gnome-system-monitor gnome-tour gnome-disk-utility gnome-remote-desktop
