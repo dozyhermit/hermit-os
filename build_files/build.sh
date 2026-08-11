@@ -23,11 +23,13 @@ dnf5 install -y "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-
 dnf5 config-manager setopt fedora-cisco-openh264.enabled=1
 dnf5 copr enable lizardbyte/beta
 
+dnf5 update
+
 # this removes dnf packages
 dnf5 remove -y firefox firefox-langpacks malcontent-control yelp gnome-color-manager gnome-system-monitor gnome-tour gnome-disk-utility gnome-remote-desktop
 
 # this installs dnf packages
-dnf5 install -y zsh git steam sunshine
+dnf5 install -y zsh git steam Sunshine
 
 # this cleans dnf packages
 dnf5 autoremove -y
