@@ -10,7 +10,7 @@ This is a custom bootc image of Fedora Silverblue.
 
 The application changes are as follows:
 
-1. Adding `git`, `zsh` and `librewolf`
+1. Adding `git`, `zsh`, `steam`, `sunshine` and `librewolf`
 2. Removing `google-chrome` and `PyCharm` package repositories
 3. Removing `firefox`, preinstalled GNOME packages
 

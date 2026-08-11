@@ -16,15 +16,15 @@ set -ouex pipefail
 rm -rf /etc/yum.repos.d/_copr\:copr.fedorainfracloud.org\:phracek\:PyCharm.repo
 rm -rf /etc/yum.repos.d/google-chrome.repo
 
+# this installs rpm-fusion and enables other repositories
+dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+dnf5 install -y https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+dnf5 config-manager setopt fedora-cisco-openh264.enabled=1
+dnf5 copr enable lizardbyte/beta
+
 # this removes dnf packages
 dnf5 remove -y firefox firefox-langpacks malcontent-control yelp gnome-color-manager gnome-system-monitor gnome-tour gnome-disk-utility gnome-remote-desktop
-
-# this installs rpm-fusion
-dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-dnf5 config-manager setopt fedora-cisco-openh264.enabled=1
-
-# this installs sunshine
-dnf5 copr enable lizardbyte/beta
 
 # this installs dnf packages
 dnf5 install -y zsh git steam Sunshine
