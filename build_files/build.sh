@@ -9,7 +9,7 @@ set -ouex pipefail
 # this installs/removes packages from fedora repositories or flatpak
 # example: dnf5 install -y tmux 
 
-# this configures package repositories
+# this configures dnf package repositories
 rm -rf /etc/yum.repos.d/_copr\:copr.fedorainfracloud.org\:phracek\:PyCharm.repo
 rm -rf /etc/yum.repos.d/google-chrome.repo
 
