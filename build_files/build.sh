@@ -27,7 +27,7 @@ dnf5 copr enable lizardbyte/beta
 dnf5 remove -y firefox firefox-langpacks malcontent-control yelp gnome-color-manager gnome-system-monitor gnome-tour gnome-disk-utility gnome-remote-desktop
 
 # this installs dnf packages
-dnf5 install -y zsh git steam Sunshine
+dnf5 install -y zsh git steam sunshine
 
 # this cleans dnf packages
 dnf5 autoremove -y
