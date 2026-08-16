@@ -16,29 +16,17 @@ rm -rf /etc/yum.repos.d/google-chrome.repo
 dnf5 install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
 dnf5 install -y "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
-dnf5 config-manager -y setopt fedora-cisco-openh264.enabled=1
-dnf5 copr -y enable lizardbyte/beta
-
 dnf5 update -y
 
 # this removes dnf packages
 dnf5 remove -y firefox firefox-langpacks malcontent-control yelp gnome-color-manager gnome-system-monitor gnome-tour gnome-disk-utility gnome-remote-desktop ImageMagick nano
 
 # this installs dnf packages
-dnf5 install -y zsh git vim steam Sunshine
+dnf5 install -y zsh git vim
 
 # this cleans dnf packages
 dnf5 autoremove -y
 dnf5 clean -y all
-
-# this removes flatpak packages
-flatpak remove -y --noninteractive --all
-
-# this installs flathub
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-# this installs flatpak packages
-flatpak install -y --noninteractive io.gitlab.librewolf-community
 
 ### Configurations
 
